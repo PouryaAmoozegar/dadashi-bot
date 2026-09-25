@@ -3,12 +3,15 @@ import jdatetime
 from datetime import datetime
 import random
 import time
+import os
 # import threading
 from concurrent.futures import ThreadPoolExecutor
 # ================= TOKEN =================
-bot_token = "8979748713:AAHE0G0wny29gd-0lKB8pd6d2JUt0gdZyGU"
 
-bot = telebot.TeleBot(bot_token)
+
+Token = os.getenv("BOT_TOKEN")
+bot = telebot.TeleBot(Token)
+
 # ================= STATE =================
 state = {
     "mood": "normal",
